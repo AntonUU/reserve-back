@@ -1,0 +1,27 @@
+{
+  "list": [
+    {
+      "index": 1,
+      "reserveName": "张三",
+      "reserveSex": "男",
+      "reservePhone": "15777191120",
+      "accompanyingNum": 5,
+      "createDatetime": "2024-06-09 15:52:33",
+      "startDatetime": "2024-06-09 15:52:33",
+      "endDatetime": "2024-06-09 17:52:33",
+      "reserveStatus": "待受理"
+    },
+    {
+      "index": 2,
+      "reserveName": "李四",
+      "reserveSex": "女",
+      "reservePhone": "15777191121",
+      "accompanyingNum": 0,
+      "createDatetime": "2024-06-09 15:52:33",
+      "startDatetime": "2024-06-09 15:52:33",
+      "endDatetime": "2024-06-09 17:52:33",
+      "reserveStatus": "待受理"
+    }
+  ],
+  "pageTotal": 2
+}
