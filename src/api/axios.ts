@@ -37,3 +37,11 @@ export function get(uri, params): Promise<AxiosResponse<any>>{
         return result.data;
     })
 }
+
+export function post(uri, data): Promise<AxiosResponse<any>>{
+    return instance.post(uri, data, {
+        'timeout': 3000
+    }).then(result => {
+        return result.data;
+    })
+}

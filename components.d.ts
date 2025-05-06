@@ -7,6 +7,7 @@ export {}
 
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
+    AddAnnouncements: typeof import('./src/components/add-announcements.vue')['default']
     Countup: typeof import('./src/components/countup.vue')['default']
     ElAvatar: typeof import('element-plus/es')['ElAvatar']
     ElButton: typeof import('element-plus/es')['ElButton']
@@ -70,9 +71,11 @@ declare module '@vue/runtime-core' {
     ElWatermark: typeof import('element-plus/es')['ElWatermark']
     Header: typeof import('./src/components/header.vue')['default']
     Reserve_table: typeof import('./src/components/table-reserve.vue')['default']
+    RichText: typeof import('./src/components/RichText.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
     Sidebar: typeof import('./src/components/sidebar.vue')['default']
+    TableAnnouncement: typeof import('./src/components/table-announcement.vue')['default']
     TableCustom: typeof import('./src/components/table-custom.vue')['default']
     TableDetail: typeof import('./src/components/table-detail.vue')['default']
     TableEdit: typeof import('./src/components/table-edit.vue')['default']

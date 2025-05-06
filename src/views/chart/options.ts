@@ -224,10 +224,14 @@ export const ringOptions = {
 };
 
 export const dashOpt1 = {
+    legend: {
+        data: ['行人预约', '车辆预约'],
+        bottom: 0
+    },
     xAxis: {
         type: 'category',
         boundaryGap: false,
-        data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
+        data: ['周一', '周二', '周三', '周四', '周五', '周六', '周日'],
     },
     yAxis: {
         type: 'value',
@@ -236,32 +240,34 @@ export const dashOpt1 = {
         top: '2%',
         left: '2%',
         right: '3%',
-        bottom: '2%',
+        bottom: '10%',
         containLabel: true,
     },
-    color: ['#009688', '#f44336'],
+    color: ['#f44336', '#009688'],
     series: [
         {
+            name: '行人预约',
             type: 'line',
             areaStyle: {
                 color: new graphic.LinearGradient(0, 0, 0, 1, [
                     {
                         offset: 0,
-                        color: 'rgba(0, 150, 136,0.8)',
+                        color: 'rgba(244, 67, 54, 0.8)',
                     },
                     {
                         offset: 1,
-                        color: 'rgba(0, 150, 136,0.2)',
+                        color: 'rgba(244, 67, 54, 0.2)',
                     },
                 ]),
             },
             smooth: true,
-            data: [120, 132, 301, 134, 90, 230, 210],
+            data: [7, 5, 2, 0, 5, 12, 8],
         },
         {
+            name: '车辆预约',
             type: 'line',
             smooth: true,
-            data: [220, 122, 191, 234, 190, 130, 310],
+            data: [3, 6, 8, 1, 3, 14, 13],
         },
     ],
 };
@@ -271,9 +277,10 @@ export const dashOpt2 = {
         bottom: '1%',
         left: 'center',
     },
-    color: ['#3f51b5', '#009688', '#f44336', '#00bcd4', '#1ABC9C'],
+    color: ['#f44336', '#009688'],
     series: [
         {
+            name: '预约类型',
             type: 'pie',
             radius: ['40%', '70%'],
             avoidLabelOverlap: false,
@@ -282,12 +289,13 @@ export const dashOpt2 = {
                 borderColor: '#fff',
                 borderWidth: 2,
             },
+            label: {
+                show: true,
+                formatter: '{b}: {c} ({d}%)'
+            },
             data: [
-                { value: 1048, name: '数码' },
-                { value: 735, name: '食品' },
-                { value: 580, name: '母婴' },
-                { value: 484, name: '家电' },
-                { value: 300, name: '运动' },
+                { value: 39, name: '行人预约' },
+                { value: 48, name: '车辆预约' },
             ],
         },
     ],
